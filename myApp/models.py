@@ -8,3 +8,10 @@ class Student(models.Model):
     saddr=models.CharField(max_length=30)
     def __str__(self):
         return self.sname
+    
+class teacher(models.Model):
+    tno=models.IntegerField()
+    tname=models.CharField(max_length=30)
+    tmarks=models.FloatField()
+    taddr=models.CharField(max_length=30)
+      
