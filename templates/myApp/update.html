@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+{% extends 'myApp/1.html' %}
+
+<html lang="en" dir="ltr">
+<head>
+    <title>Update Form</title>
+</head>
+<body>
+
+{% block for_child %}
+    <h3 style="color:blue">Updation Form</h3>
+
+    <form method="post">
+        Number: <input type="text" name="sno" value="{{ stud.sno }}"><br><br>
+        Name: <input type="text" name="sname" value="{{ stud.sname }}"><br><br>
+        Marks: <input type="text" name="smarks" value="{{ stud.smarks }}"><br><br>
+        Address: <input type="text" name="saddr" value="{{ stud.saddr }}"><br><br>
+
+        {% csrf_token %}
+        <input type="submit" class="btn btn-warning" value="Submit">
+    </form>
+{% endblock %}
+
+</body>
+</html>
